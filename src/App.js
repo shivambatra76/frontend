@@ -1,12 +1,16 @@
+import { Fragment } from 'react';
+import Router from './routes/index';
 import './App.css';
-import Router from './routes'
 
 function App() {
-  return (
-    <div className="App">
-     <Router/>
-    </div>
-  );
+
+	return (
+		<Fragment>
+			<div className="App">
+				<Router/>
+			</div>
+		</Fragment>
+	);
 }
 
 export default App;
