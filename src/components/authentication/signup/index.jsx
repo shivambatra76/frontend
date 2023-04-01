@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { TextField, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import React, { useState, Fragment } from 'react';
+import { TextField, Button } from '@mui/material';
+import Wave from '../../common_components/Wave';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -32,48 +33,51 @@ const Signup = () => {
     const isSubmitDisabled = !isValidEmail || !isValidPassword || password !== confirmPassword;
 
     return (
-        <form onSubmit={handleSubmit}>
-            <TextField
-                label="Email"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                required
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
-                error={!isValidEmail}
-                helperText={!isValidEmail && 'Invalid email'}
-            />
-            <TextField
-                label="Password"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                required
-                type="password"
-                value={password}
-                onChange={handlePasswordChange}
-                error={!isValidPassword}
-                helperText={!isValidPassword && 'Invalid password. Must be at least 8 characters long, and contain at least 1 special character and 1 number.'}
-            />
-            <TextField
-                label="Confirm Password"
-                variant="outlined"
-                margin="normal"
-                fullWidth
-                required
-                type="password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
-                error={password !== confirmPassword}
-                helperText={password !== confirmPassword && 'Passwords do not match'}
-            />
-            <Button variant="contained" color="primary" type="submit" disabled={isSubmitDisabled}
-            >
-                Sign Up
-            </Button>
-        </form>
+        <Fragment>
+            <form onSubmit={handleSubmit}>
+                <TextField
+                    label="Email"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                    required
+                    type="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    error={!isValidEmail}
+                    helperText={!isValidEmail && 'Invalid email'}
+                />
+                <TextField
+                    label="Password"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                    required
+                    type="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    error={!isValidPassword}
+                    helperText={!isValidPassword && 'Invalid password. Must be at least 8 characters long, and contain at least 1 special character and 1 number.'}
+                />
+                <TextField
+                    label="Confirm Password"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                    required
+                    type="password"
+                    value={confirmPassword}
+                    onChange={handleConfirmPasswordChange}
+                    error={password !== confirmPassword}
+                    helperText={password !== confirmPassword && 'Passwords do not match'}
+                />
+                <Button variant="contained" color="primary" type="submit" disabled={isSubmitDisabled}
+                >
+                    Sign Up
+                </Button>
+            </form>
+            <Wave />
+        </Fragment>
     );
 };
 

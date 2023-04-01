@@ -4,6 +4,7 @@ import { TextField, Button, FormControl, InputLabel, InputAdornment, IconButton,
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import "./style.css";
+import Wave from '../../common_components/Wave';
 
 const Login = (props) => {
     const [errorMessages, setErrorMessages] = useState({});
@@ -64,6 +65,7 @@ const Login = (props) => {
                     <Button variant="contained" disabled={!isEmailValid && !isPassValid} type="submit">Login</Button>
                 </div>
             </form>
+            <Wave />
         </Fragment>
     );
 };
