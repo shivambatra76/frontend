@@ -1,4 +1,5 @@
-import { Fragment, lazy, Suspense } from 'react';
+import { Fragment } from 'react';
+import Router from './routes/index';
 import './App.css';
 import './assets/styles/style.css'
 
