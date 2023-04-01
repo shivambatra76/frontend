@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import ErrorPage from '../components/common_components/ErrorPage';
 import DashboardHome from '../components/Dashboard/DashboardHome';
 const SignUp = lazy(() => import('../components/authentication/signup'));
-const Login = lazy(() => import('../components/authentication/login'));
+const Login = lazy(() => import('../components/authentication/login')); 
 
 const Router = () => {
     return (
