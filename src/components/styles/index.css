@@ -1,0 +1,59 @@
+.NavBar{
+    width: 100%;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(119, 12, 165) !important;
+    /* display: flex; */
+    /* align-content: center; */
+    flex: 1 1;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+.Logo{
+    display: flex;
+    align-items: center;
+}
+.details{
+    display: flex;
+    align-items: center;
+}
+.css-i4bv87-MuiSvgIcon-root{
+    width: 2em !important;
+}
+.NavBar .auth{
+    padding: 0 10px;
+}
+.NavBar .auth a{
+color: white;
+margin-left: 10px;
+}
+.Logo {
+    margin-left: 10px;
+    color: white;
+}
+.container{
+    margin: calc(100% - 93%) 0;
+
+}
+/* .cardContainer{
+    display: flex;
+    flex-direction: row;
+} */
+.css-o69gx8-MuiCardMedia-root{
+    width: 50% !important;
+    margin-top: 5px;
+    border-radius: 90px;
+}
+
+.cardAction{
+    display: flex !important;
+    flex-direction: column;
+   
+}
+.candidate_name{
+    margin-top: 2px;
+}
